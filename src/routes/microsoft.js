@@ -35,8 +35,8 @@ loginRouter.get(
     // Enviar cookie igual que en loginController
     res.cookie("access_token", token, {
       httpOnly: true,
-      secure: false, // pon true en producción con HTTPS
-      sameSite: "strict",
+      secure: true, // pon true en producción con HTTPS
+      sameSite: "None",
       maxAge: 3600000, // 1 hora
     });
     const userString = JSON.stringify(userData);
