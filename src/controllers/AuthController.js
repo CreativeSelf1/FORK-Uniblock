@@ -115,8 +115,8 @@ export function checkAuthController(req, res) {
 export function logoutController(req, res) {
   res.clearCookie("access_token", {
     httpOnly: true,
-    secure: false,
-    sameSite: "strict",
+    secure: true, // true solo si usas HTTPS
+    sameSite: 'None',
   });
   res.status(200).json({ message: "Logout successful" });
 }
