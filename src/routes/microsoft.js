@@ -35,8 +35,8 @@ loginRouter.get(
     // Enviar cookie igual que en loginController
     res.cookie("access_token", token, {
       httpOnly: true,
-      secure: true, // pon true en producción con HTTPS
-      sameSite: "None",
+      secure: true, // true solo si usas HTTPS
+      sameSite: 'None',
       maxAge: 3600000, // 1 hora
     });
     const userString = JSON.stringify(userData);
@@ -47,7 +47,7 @@ loginRouter.get(
       <body>
       </body>
       <script>
-        window.opener.postMessage(${userString}, 'http://localhost:5173/user')
+        window.opener.postMessage(${userString}, 'https://uniblock-frontend.vercel.app/user')
       </script>
     </html>`);
   }
