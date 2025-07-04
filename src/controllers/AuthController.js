@@ -49,7 +49,7 @@ export async function loginController(req, res) {
 
     res.cookie("access_token", token, {
       httpOnly: true,
-      secure: false, // true solo si usas HTTPS
+      secure: true, // true solo si usas HTTPS
       sameSite: "strict",
       maxAge: 3600000,
     });
