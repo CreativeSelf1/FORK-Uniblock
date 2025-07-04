@@ -18,7 +18,7 @@ const ip = process.env.IP;
 const port = process.env.PORT;
 
 const corsOptions = {
-  origin: "http://localhost:5173", // URL de tu frontend
+  origin: "https://uniblock-frontend.vercel.app", // URL de tu frontend
   credentials: true, // Permitir el uso de credenciales (como cookies)
 };
 
