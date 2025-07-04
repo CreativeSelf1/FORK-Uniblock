@@ -11,7 +11,7 @@ passport.use(
   new MicrosoftStrategy(
     {
       clientID: process.env.MICROSOFT_CLIENT_ID,
-      callbackURL: "http://localhost:3000/auth/microsoft/callback",
+      callbackURL: "https://uniblock-backend1.onrender.com/auth/microsoft/callback",
       scope: ["user.read"],
       authorizationURL: `https://login.microsoftonline.com/${process.env.MICROSOFT_TENANT_ID}/oauth2/v2.0/authorize`,
       tokenURL: `https://login.microsoftonline.com/${process.env.MICROSOFT_TENANT_ID}/oauth2/v2.0/token`,
